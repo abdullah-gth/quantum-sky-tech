@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Code and Leads | Software & Marketing Solutions</title>
+  <link rel="icon" type="image/webp" href="../images/icon.webp" />
+  <meta name="description"
+    content="Code and Leads provides top-tier Web Development, Mobile Apps, Graphic Design, and Digital Marketing solutions." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper.js CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="../js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-bgDark text-gray-200 font-sans antialiased overflow-x-hidden">
+
+  <!-- ========================================== -->
+  <!-- 1. FIXED LEFT SIDEBAR TOOLBAR             -->
+  <!-- ========================================== -->
+  <aside
+    class="fixed left-0 top-0 h-full w-16 bg-[#0A0A0D] border-r border-borderDark z-50 hidden md:flex flex-col justify-between items-center py-6 text-xs font-bold tracking-widest text-gray-400">
+    <button id="openOverlayBtn"
+      class="w-12 h-12 flex items-center justify-center text-white hover:text-brandRed transition">
+      <i class="fa-solid fa-bars text-2xl"></i>
+    </button>
+
+    <div class="flex flex-col items-center space-y-12">
+      <a href="#contact"
+        class="vertical-text uppercase hover:text-white transition flex items-center gap-3 tracking-wider">
+        <i class="fa-regular fa-envelope rotate-90 text-brandRed text-[1.5rem]"></i> GET IN TOUCH
+      </a>
+      <a href="https://wa.me/" target="_blank"
+        class="vertical-text uppercase hover:text-emerald-400 transition flex items-center gap-3 tracking-wider">
+        <i class="fa-brands fa-whatsapp rotate-90 text-emerald-500 text-[1.5rem]"></i> WHATSAPP
+      </a>
+    </div>
+
+    <a href="#"
+      class="vertical-text uppercase hover:text-brandRed transition flex items-center gap-3 text-xs tracking-wider">
+      <i class="fa-solid fa-arrow-right rotate-90 text-[1.5rem]"></i> TOP
+    </a>
+  </aside>
+
+  <!-- Main Content Wrapper (Offset for Left Toolbar) -->
+  <div class="md:pl-16 min-h-screen flex flex-col">
+
+    <!-- ========================================== -->
+    <!-- TOP ANNOUNCEMENT HEADER & NAVIGATION       -->
+    <!-- ========================================== -->
+    <header class="bg-brandDarkRed text-white h-[30px] px-8 flex justify-between items-center">
+      <div class="max-w-7xl mx-auto w-full flex justify-between items-center h-full">
+        <div class="flex items-center gap-4 text-[10px] font-bold tracking-widest text-gray-200">
+          <a href="../mailto:info@codeandleads.com" class="hover:text-white transition flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brandRed"></i> info@codeandleads.com
+          </a>
+          <span class="text-white/20">|</span>
+          <a href="https://wa.me/" class="hover:text-white transition flex items-center gap-1.5">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i> +92 311 1456324
+          </a>
+        </div>
+        <div class="flex items-center space-x-3.5 text-[11px]">
+          <span class="hidden sm:inline text-gray-300 font-medium uppercase tracking-wider">Follow Us |</span>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <nav
+      class="sticky top-0 z-40 bg-[#0E0E12]/95 backdrop-blur-md border-b border-borderDark px-8 h-[60px] flex items-center">
+      <div class="max-w-7xl mx-auto w-full flex justify-between items-center h-full">
+
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center">
+          <img src="../images/white-logo.webp" alt="Code and Leads Logo" class="h-12 w-auto object-contain">
+        </a>
+
+        <!-- Desktop Navigation Items with Hover Mega Menus -->
+        <div class="hidden lg:flex items-center h-full text-[11px] font-bold uppercase tracking-wider text-gray-300">
+
+          <!-- ================= ABOUT US ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">About Us <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] left-0 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-building text-brandRed text-lg"></i> Company Overview</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../our-story.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Our
+                      Story</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Learn how we started.
+                    </p>
+                  </a>
+                  <a href="../mission-vision.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Mission
+                      & Vision</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Our core values &
+                      goals.</p>
+                  </a>
+                  <a href="../team.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Meet
+                      the Team</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">The experts behind the
+                      magic.</p>
+                  </a>
+                  <a href="../careers.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Careers
+                    </h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Join our growing
+                      company.</p>
+                  </a>
+                  <a href="../reviews.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Client
+                      Reviews</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">What our partners say.
+                    </p>
+                  </a>
+                  <a href="../contact.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Contact
+                      Us</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Get in touch directly.
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">Our Culture</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">Innovation and excellence in everything we do.</p>
+                <div
+                  class="w-16 h-16 rounded-full bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= WEBSITE ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">Website <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] left-1/2 -translate-x-1/2 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-laptop-code text-brandRed text-lg"></i> Website Development</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../website_services/shopify.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Shopify</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Powerful e-commerce
+                      platform.</p>
+                  </a>
+                  <a href="../website_services/wordpress.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">WordPress</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Popular CMS for
+                      management.</p>
+                  </a>
+                  <a href="../website_services/custom-web-apps.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Custom
+                      Web Apps</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Scalable bespoke web
+                      solutions.</p>
+                  </a>
+                  <a href="../website_services/e-commerce.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">E-commerce</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Buying and selling
+                      online.</p>
+                  </a>
+                  <a href="../website_services/landing-pages.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Landing
+                      Pages</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">High converting funnel
+                      pages.</p>
+                  </a>
+                  <a href="../website_services/web-maintenance.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Web
+                      Maintenance</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Ongoing support &
+                      updates.</p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">View all services</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">We don't stop there, check out all the services.
+                </p>
+                <div
+                  class="w-16 h-16 rounded-full bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= MARKETING ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">Marketing <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] left-1/2 -translate-x-1/2 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-bullhorn text-brandRed text-lg"></i> Digital Marketing</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../marketing_services/social-media.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Social
+                      Media</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Engage users across
+                      platforms.</p>
+                  </a>
+                  <a href="../marketing_services/google-ads.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Google
+                      Ads</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Highly targeted PPC
+                      campaigns.</p>
+                  </a>
+                  <a href="../marketing_services/content-creation.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Content
+                      Creation</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Blogs and video
+                      scripts.</p>
+                  </a>
+                  <a href="../marketing_services/email-marketing.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Email
+                      Marketing</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Automated newsletter
+                      sequences.</p>
+                  </a>
+                  <a href="../marketing_services/influencer-marketing.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Influencer Marketing</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Partner with industry
+                      leaders.</p>
+                  </a>
+                  <a href="../marketing_services/analytics-setup.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Analytics Setup</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Track user journeys &
+                      data.</p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">Drive Traffic</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">Boost your sales with our targeted campaigns.</p>
+                <div
+                  class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= SEO ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">SEO <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] left-1/2 -translate-x-1/2 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-magnifying-glass-chart text-brandRed text-lg"></i> SEO Services</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../seo_services/on-page-seo.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">On-Page
+                      SEO</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Optimize content &
+                      metadata.</p>
+                  </a>
+                  <a href="../seo_services/off-page-seo.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Off-Page SEO</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Link building
+                      strategies.</p>
+                  </a>
+                  <a href="../seo_services/technical-seo.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Technical SEO</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Speed and crawlability
+                      fixes.</p>
+                  </a>
+                  <a href="../seo_services/local-seo.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Local
+                      SEO</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Google My Business
+                      optimization.</p>
+                  </a>
+                  <a href="../seo_services/ecommerce-seo.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">E-commerce SEO</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Product ranking &
+                      schema.</p>
+                  </a>
+                  <a href="../seo_services/seo-audits.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">SEO
+                      Audits</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Deep performance
+                      reviews.</p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">Rank Higher</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">Dominate search results.</p>
+                <div
+                  class="w-16 h-16 rounded-full bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-brands fa-google"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= GRAPHIC DESIGNING ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">Graphic Designing <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] right-0 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-pen-nib text-brandRed text-lg"></i> Branding & Design</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../graphic_designing_services/ui-ux-prototyping.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">UI/UX
+                      Prototyping</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Figma web and mobile
+                      interfaces.</p>
+                  </a>
+                  <a href="../graphic_designing_services/brand-identity.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Brand
+                      Identity</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Logos and typography
+                      guidelines.</p>
+                  </a>
+                  <a href="../graphic_designing_services/social-banners.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Social
+                      Banners</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Eye-catching posts and
+                      ad creatives.</p>
+                  </a>
+                  <a href="../graphic_designing_services/print-media.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Print
+                      Media</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Packaging, business
+                      cards & standees.</p>
+                  </a>
+                  <a href="../graphic_designing_services/motion-graphics.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Motion
+                      Graphics</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Animations and short
+                      videos.</p>
+                  </a>
+                  <a href="../graphic_designing_services/illustrations.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Illustrations</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Custom vector arts and
+                      icons.</p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">Be Unique</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">Captivate your audience with stunning visuals.</p>
+                <div
+                  class="w-16 h-16 rounded-full bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= SOFTWARE SERVICES ================= -->
+          <div class="group h-full flex items-center px-4 relative cursor-pointer">
+            <span class="group-hover:text-brandRed transition flex items-center gap-1.5">Software <i
+                class="fa-solid fa-angle-down text-[9px] group-hover:-rotate-180 transition duration-300"></i></span>
+            <div
+              class="absolute top-[60px] right-0 w-[900px] bg-[#121217] border border-borderDark rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 p-8 flex gap-8 cursor-default before:content-[''] before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <div class="w-3/4">
+                <h4 class="flex items-center gap-2 text-white text-sm font-bold border-b border-borderDark pb-3 mb-5"><i
+                    class="fa-solid fa-server text-brandRed text-lg"></i> Engineering</h4>
+                <div class="grid grid-cols-3 gap-y-6 gap-x-6">
+                  <a href="../software_services/flutter-apps.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Flutter
+                      Mobile Apps</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Cross-platform iOS and
+                      Android applications.</p>
+                  </a>
+                  <a href="../software_services/nodejs-backends.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Node.js
+                      Backends</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">High-performance APIs
+                      and microservices.</p>
+                  </a>
+                  <a href="../software_services/react-native.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">React
+                      Native</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Robust mobile
+                      solutions using React infrastructure.</p>
+                  </a>
+                  <a href="../software_services/enterprise-dashboards.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Enterprise Dashboards</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Complex administrative
+                      panels and CRM systems.</p>
+                  </a>
+                  <a href="../software_services/aws-architectures.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">AWS
+                      Architectures</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Serverless deployment
+                      and scaling.</p>
+                  </a>
+                  <a href="../software_services/database-migration.html" class="group/link block">
+                    <h5 class="text-gray-200 text-xs font-bold group-hover/link:text-brandRed transition mb-1.5">Database Migration</h5>
+                    <p class="text-[9.5px] text-gray-400 font-medium normal-case leading-relaxed">Seamless data transfer
+                      and optimization.</p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-1/4 bg-[#0a0a0d] rounded-xl p-5 border border-borderDark flex flex-col justify-center items-center text-center">
+                <h5 class="text-white text-sm font-bold mb-2">Scale Globally</h5>
+                <p class="text-[10px] text-gray-400 normal-case mb-4">Enterprise-grade architecture for your next big
+                  idea.</p>
+                <div
+                  class="w-16 h-16 rounded-full bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-500">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="#contact"
+          class="relative overflow-hidden bg-brandRed hover:bg-brandDarkRed text-white text-[11px] font-extrabold uppercase tracking-widest px-6 py-2.5 rounded-full transition shadow-lg group">
+          <canvas id="btnParticles" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-70"></canvas>
+          <span class="relative z-10 flex items-center gap-2">Get Started <i
+              class="fa-solid fa-bolt text-yellow-300 group-hover:scale-110 transition duration-300"></i></span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- FULL OVERLAY DRAWER MENU (MEGA MENU) -->
+    <div id="fullOverlayMenu"
+      class="fixed top-0 left-0 w-full h-screen bg-bgDark/95 backdrop-blur-2xl z-50 transform -translate-y-full transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-y-auto flex flex-col">
+
+      <!-- Top Header Area of Mega Menu -->
+      <div class="px-8 lg:px-16 h-[60px] shrink-0 flex justify-between items-center border-b border-borderDark/50">
+        <div class="flex items-center space-x-3">
+          <span class="font-heading font-black text-xl lg:text-2xl text-white tracking-wider">Code<span
+              class="text-brandRed">and</span>Leads</span>
+        </div>
+        <button id="closeOverlayBtn"
+          class="w-10 h-10 bg-white/5 hover:bg-brandRed text-gray-400 hover:text-white rounded-full flex items-center justify-center text-lg transition-all duration-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Mega Menu Content Grid -->
+      <div class="flex-grow px-8 lg:px-16 py-12">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+
+          <!-- Column 1: Brand & Contact Info -->
+          <div class="flex flex-col pr-6 lg:border-r border-borderDark/40">
+            <h3 class="text-white font-heading font-black text-xl mb-6">About <span class="text-brandRed">Us</span></h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              We are an official Shopify Partner and a premium software & marketing agency dedicated to scaling
+              enterprise businesses globally with high-converting digital solutions.
+            </p>
+            <div class="space-y-4 text-sm font-medium">
+              <a href="../mailto:info@codeandleads.com"
+                class="flex items-center gap-3 text-gray-300 hover:text-brandRed transition">
+                <div class="w-8 h-8 rounded-lg bg-brandRed/10 text-brandRed flex items-center justify-center"><i
+                    class="fa-solid fa-envelope"></i></div>
+                info@codeandleads.com
+              </a>
+              <a href="https://wa.me/" class="flex items-center gap-3 text-gray-300 hover:text-emerald-400 transition">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center"><i
+                    class="fa-brands fa-whatsapp"></i></div>
+                +92 311 1456324
+              </a>
+            </div>
+            <div class="flex items-center gap-4 mt-10">
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-brandRed flex items-center justify-center text-gray-400 hover:text-white transition"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-brandRed flex items-center justify-center text-gray-400 hover:text-white transition"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-brandRed flex items-center justify-center text-gray-400 hover:text-white transition"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Development Services -->
+          <div>
+            <h3 class="text-white font-bold uppercase tracking-widest text-sm mb-8 flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brandRed"></span> Development
+            </h3>
+            <ul class="space-y-5 text-gray-300 font-medium text-sm">
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-code"></i>
+                  </div> Custom Web Development
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div> Flutter Mobile Apps
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-brands fa-node-js"></i>
+                  </div> Node.js Backend APIs
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-brands fa-shopify"></i>
+                  </div> Shopify Themes & Plugins
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-server"></i>
+                  </div> Enterprise Dashboards
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-brands fa-wordpress"></i>
+                  </div> WordPress Solutions
+                </a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Marketing & Design -->
+          <div>
+            <h3 class="text-white font-bold uppercase tracking-widest text-sm mb-8 flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Marketing & Design
+            </h3>
+            <ul class="space-y-5 text-gray-300 font-medium text-sm">
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                  </div> Search Engine Optimization
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-solid fa-bullhorn"></i>
+                  </div> Social Media Marketing
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-brands fa-google"></i>
+                  </div> Google Ads & PPC
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-solid fa-pen-nib"></i>
+                  </div> UI/UX Prototyping
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div> Brand Identity & Logos
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-cyan-400/20 text-gray-400 group-hover:text-cyan-400 flex items-center justify-center transition">
+                    <i class="fa-solid fa-video"></i>
+                  </div> Video Editing & Animations
+                </a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: App & Cloud Solutions -->
+          <div>
+            <h3 class="text-white font-bold uppercase tracking-widest text-sm mb-8 flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brandRed"></span> App & Cloud Solutions
+            </h3>
+            <ul class="space-y-5 text-gray-300 font-medium text-sm">
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-cloud"></i>
+                  </div> Cloud Hosting & AWS
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-server"></i>
+                  </div> DevOps & CI/CD
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-brands fa-react"></i>
+                  </div> React Native Apps
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </div> Data Analytics
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div> Cyber Security
+                </a></li>
+              <li><a href="#" class="group flex items-center gap-4 hover:text-white transition">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-brandRed/20 text-gray-400 group-hover:text-brandRed flex items-center justify-center transition">
+                    <i class="fa-solid fa-headset"></i>
+                  </div> 24/7 IT Support
+                </a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BODY SECTIONS -->
+    <main class="flex-grow">
+      <!-- ========================================== -->
+      <!-- SECTION 1: HERO                     -->
+      <!-- ========================================== -->
+      <section
+        class="relative bg-gradient-to-b from-[#14141B] via-bgDark to-bgDark pt-32 pb-16 px-6 border-b border-borderDark overflow-hidden">
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+          <h1 class="font-heading text-5xl md:text-7xl font-black text-white leading-tight mb-6">Node.js <span class="text-brandRed">Backends</span></h1>
+          <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+            Custom themes, lightning-fast performance, and secure, scalable architecture to power your business online.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+            <a href="#contact"
+              class="bg-brandRed hover:bg-brandDarkRed text-white text-sm font-extrabold uppercase tracking-wider px-10 py-5 rounded-full transition shadow-xl shadow-brandRed/40 flex items-center gap-3">
+              Start WordPress Project <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+            <a href="#portfolio"
+              class="bg-[#181820] hover:bg-[#22222D] text-white border border-borderDark text-sm font-extrabold uppercase tracking-wider px-10 py-5 rounded-full transition">
+              View Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 2: WHY CHOOSE US & CHECKMARKS      -->
+      <!-- ========================================== -->
+      <section class="py-24 px-8 bg-bgDark border-b border-borderDark">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-brandRed text-sm font-bold uppercase tracking-widest block mb-3">Why Choose Us</span>
+            <h2 class="font-heading font-black text-3xl md:text-5xl text-white mb-6">Expert WordPress Solutions Built to
+              Convert</h2>
+            <p class="text-gray-400 text-base leading-relaxed mb-8">
+              We don't just build websites; we craft digital experiences. Our WordPress solutions are tailored for SEO,
+              speed, and maximum conversions, ensuring your business stands out in a crowded digital landscape.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> Custom Theme Development
+              </div>
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> WooCommerce Integration
+              </div>
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> Advanced Security
+              </div>
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> Core Web Vitals Optimized
+              </div>
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> API & Plugin Integrations
+              </div>
+              <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+                <i class="fa-solid fa-circle-check text-brandRed text-lg"></i> Ongoing Maintenance
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute inset-0 bg-brandRed/20 blur-3xl rounded-full"></div>
+            <div class="relative bg-cardBg border border-borderDark rounded-3xl p-8 shadow-2xl">
+              <div class="flex items-center justify-between border-b border-borderDark pb-6 mb-6">
+                <div>
+                  <h4 class="text-white font-bold text-xl">Speed Performance</h4>
+                  <p class="text-emerald-400 text-sm mt-1">Excellent (99/100)</p>
+                </div>
+                <i class="fa-solid fa-gauge-high text-4xl text-brandRed"></i>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between text-xs text-gray-400 mb-1">
+                    <span>First Contentful Paint</span>
+                    <span>0.8s</span>
+                  </div>
+                  <div class="w-full bg-bgDark rounded-full h-2">
+                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-gray-400 mb-1">
+                    <span>Time to Interactive</span>
+                    <span>1.2s</span>
+                  </div>
+                  <div class="w-full bg-bgDark rounded-full h-2">
+                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 3: SERVICES CARDS                  -->
+      <!-- ========================================== -->
+      <section class="py-24 px-8 bg-[#0a0a0d] border-b border-borderDark relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brandRed text-sm font-bold uppercase tracking-widest block mb-3">Our Offerings</span>
+            <h2 class="font-heading font-black text-3xl md:text-5xl text-white mb-6">Comprehensive WP Services</h2>
+            <p class="text-gray-400 text-base">From simple blogs to complex enterprise e-commerce systems, our WordPress
+              expertise covers it all.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-brandRed/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-code text-2xl text-brandRed"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">Custom Theme Dev</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Pixel-perfect, lightweight, and fully customized
+                WordPress themes built from scratch.</p>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-cart-shopping text-2xl text-emerald-400"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">WooCommerce</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Scalable e-commerce stores with optimized checkout
+                flows and custom product types.</p>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-brandRed/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-plug text-2xl text-brandRed"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">Plugin Development</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Custom plugin creation for unique functionality that
+                off-the-shelf plugins can't handle.</p>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-shield-halved text-2xl text-cyan-400"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">Security Hardening</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Advanced malware protection, firewall setups, and
+                continuous vulnerability scanning.</p>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-bolt text-2xl text-yellow-500"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">Speed Optimization</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Database cleanup, caching, asset minification, and
+                CDN integration for under 1s loads.</p>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group">
+              <div
+                class="w-14 h-14 rounded-2xl bg-brandRed/10 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fa-solid fa-server text-2xl text-brandRed"></i>
+              </div>
+              <h3 class="text-xl text-white font-bold mb-3">Migration Services</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">Seamless migration from other platforms to WordPress
+                with zero downtime and SEO preservation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 4: SEO CONTENT                     -->
+      <!-- ========================================== -->
+      <section class="py-24 px-8 bg-bgDark border-b border-borderDark relative">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+          <!-- Left: Sticky Sidebar -->
+          <div class="lg:w-1/3">
+            <div class="sticky top-32 bg-cardBg border border-borderDark rounded-3xl p-8 shadow-2xl">
+              <span class="text-brandRed text-sm font-bold uppercase tracking-widest block mb-3">In-Depth
+                Expertise</span>
+              <h2 class="font-heading font-black text-3xl text-white mb-6">Why High-Performance WordPress Matters</h2>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Discover how our specialized approach to WordPress architecture drives organic traffic, enhances user
+                experience, and maximizes conversions for enterprise brands.
+              </p>
+              <ul class="space-y-3 text-sm font-medium text-gray-300">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-right text-brandRed"></i> Advanced SEO
+                  Structure</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-right text-brandRed"></i> Lightning Fast
+                  Load Times</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-right text-brandRed"></i> Bulletproof
+                  Security</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-right text-brandRed"></i> Scalable
+                  Architecture</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Long-Form Content Area -->
+          <div class="lg:w-2/3">
+            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Custom WordPress Theme Development
+              for Maximum Impact</h3>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-10">
+              When it comes to establishing a dominant online presence, off-the-shelf templates simply don't cut it. We
+              specialize in <strong class="text-white">custom WordPress theme development</strong> tailored specifically
+              to your brand's unique identity and business goals. By coding themes from scratch, we ensure zero bloat,
+              incredibly fast load times, and a seamless user experience that search engines like Google prioritize in
+              their rankings.
+            </p>
+
+            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Enterprise-Grade WooCommerce
+              Solutions</h3>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-10">
+              Scaling an e-commerce business requires a robust foundation. Our <strong class="text-white">WooCommerce
+                integration services</strong> focus on creating high-converting storefronts with streamlined checkout
+              processes, custom product variations, and secure payment gateways. We optimize your product pages for SEO,
+              ensuring your catalog ranks high for competitive industry keywords while providing a frictionless shopping
+              experience for your customers.
+            </p>
+
+            <div
+              class="bg-[#14141B] border border-borderDark rounded-2xl p-8 mb-10 border-l-4 border-l-brandRed shadow-lg">
+              <h4 class="font-heading text-xl font-bold text-white mb-3">Core Web Vitals & Technical SEO</h4>
+              <p class="text-gray-400 text-base leading-relaxed">
+                Technical SEO is the backbone of any successful digital strategy. We conduct rigorous audits and
+                implement advanced caching, image optimization (WebP), database indexing, and minification of CSS/JS
+                files to ensure your WordPress site achieves perfect Core Web Vitals scores.
+              </p>
+            </div>
+
+            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Uncompromising Security & Ongoing
+              Maintenance</h3>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-4">
+              WordPress powers over 40% of the web, making it a frequent target for malicious attacks. Our development
+              protocol includes enterprise-level security hardening—from customized login URLs and firewall
+              configurations to regular vulnerability scanning. Coupled with our dedicated maintenance plans, your
+              website remains secure, up-to-date, and performing flawlessly year-round.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 5: OUR PROJECTS                    -->
+      <!-- ========================================== -->
+      <section id="portfolio" class="py-24 px-8 bg-[#0a0a0d] border-b border-borderDark">
+        <div class="max-w-7xl mx-auto">
+          
+              <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                  <div>
+                      <span class="text-brandRed text-sm font-bold uppercase tracking-widest block mb-3">Portfolio</span>
+                      <h2 class="font-heading font-black text-3xl md:text-5xl text-white">Recent WP Projects</h2>
+                  </div>
+                  <div class="flex items-center gap-4">
+                      <!-- Custom Navigation -->
+                      <button class="wp-prev w-14 h-14 rounded-full border border-borderDark flex items-center justify-center text-gray-400 hover:text-white hover:border-brandRed hover:bg-brandRed transition shadow-lg cursor-pointer z-10">
+                          <i class="fa-solid fa-arrow-left text-lg"></i>
+                      </button>
+                      <button class="wp-next w-14 h-14 rounded-full border border-borderDark flex items-center justify-center text-gray-400 hover:text-white hover:border-brandRed hover:bg-brandRed transition shadow-lg cursor-pointer z-10">
+                          <i class="fa-solid fa-arrow-right text-lg"></i>
+                      </button>
+                  </div>
+              </div>
+
+              <div class="swiper wpProjectSwiper overflow-hidden pb-12">
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 (Grid of 4) -->
+                      <div class="swiper-slide w-full">
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                              <!-- Card 1 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="E-Commerce Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">TechGear E-Commerce</h3>
+                                          <p class="text-gray-400 text-sm">WooCommerce, Custom Theme</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 2 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Corporate Blog" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">FinTech Insights Hub</h3>
+                                          <p class="text-gray-400 text-sm">Enterprise Blog, Custom API</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 3 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Agency Portfolio" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">Creative Agency Portfolio</h3>
+                                          <p class="text-gray-400 text-sm">GSAP Animations, Headless WP</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 4 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop" alt="News Portal" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">Global News Portal</h3>
+                                          <p class="text-gray-400 text-sm">High Traffic, Advanced Caching</p>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                      
+                      <!-- Slide 2 (Grid of 4) -->
+                      <div class="swiper-slide w-full">
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                              <!-- Card 1 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="E-Commerce Project" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">TechGear E-Commerce</h3>
+                                          <p class="text-gray-400 text-sm">WooCommerce, Custom Theme</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 2 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Corporate Blog" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">FinTech Insights Hub</h3>
+                                          <p class="text-gray-400 text-sm">Enterprise Blog, Custom API</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 3 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Agency Portfolio" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">Creative Agency Portfolio</h3>
+                                          <p class="text-gray-400 text-sm">GSAP Animations, Headless WP</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Card 4 -->
+                              <div class="group cursor-pointer">
+                                  <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+                                      <div class="absolute inset-0 bg-brandRed/0 group-hover:bg-brandRed/20 transition duration-500 z-10 flex items-center justify-center">
+                                          <div class="w-16 h-16 rounded-full bg-brandRed text-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition duration-300 transform"><i class="fa-solid fa-arrow-up-right"></i></div>
+                                      </div>
+                                      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop" alt="News Portal" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                                  </div>
+                                  <div class="flex justify-between items-start px-2">
+                                      <div>
+                                          <h3 class="text-2xl text-white font-bold mb-2">Global News Portal</h3>
+                                          <p class="text-gray-400 text-sm">High Traffic, Advanced Caching</p>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Pagination -->
+<!-- Pagination -->
+            <div class="swiper-pagination !bottom-0"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 6: FAQS                            -->
+      <!-- ========================================== -->
+      <section class="py-24 px-8 bg-bgDark border-b border-borderDark">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <span class="text-brandRed text-sm font-bold uppercase tracking-widest block mb-3">Got Questions?</span>
+            <h2 class="font-heading font-black text-3xl md:text-5xl text-white">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="space-y-4">
+            <div
+              class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden faq-item transition-all duration-300">
+              <button
+                class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center text-white font-bold hover:text-brandRed transition">
+                <span>How long does it take to build a custom WordPress site?</span>
+                <i class="fa-solid fa-plus faq-icon text-gray-500 transition-transform duration-300"></i>
+              </button>
+              <div
+                class="faq-content hidden px-8 pb-6 text-gray-400 text-sm leading-relaxed border-t border-borderDark mt-4">
+                A typical custom WordPress project takes between 4 to 8 weeks, depending on the complexity of the
+                design, the number of pages, and required custom functionalities (like API integrations or e-commerce
+                features).
+              </div>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden faq-item transition-all duration-300">
+              <button
+                class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center text-white font-bold hover:text-brandRed transition">
+                <span>Do you use pre-made templates or custom themes?</span>
+                <i class="fa-solid fa-plus faq-icon text-gray-500 transition-transform duration-300"></i>
+              </button>
+              <div
+                class="faq-content hidden px-8 pb-6 text-gray-400 text-sm leading-relaxed border-t border-borderDark mt-4">
+                We specialize in custom WordPress theme development. This means we design your site from scratch in
+                Figma and code a unique theme tailored specifically for your brand, ensuring optimal speed and security
+                compared to bloated pre-made templates.
+              </div>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden faq-item transition-all duration-300">
+              <button
+                class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center text-white font-bold hover:text-brandRed transition">
+                <span>Will my website be mobile-friendly and fast?</span>
+                <i class="fa-solid fa-plus faq-icon text-gray-500 transition-transform duration-300"></i>
+              </button>
+              <div
+                class="faq-content hidden px-8 pb-6 text-gray-400 text-sm leading-relaxed border-t border-borderDark mt-4">
+                Absolutely. Every site we build is fully responsive across all devices (mobile, tablet, desktop). We
+                also strictly adhere to Google's Core Web Vitals, optimizing images, caching, and scripts to ensure
+                lightning-fast load times.
+              </div>
+            </div>
+            <div
+              class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden faq-item transition-all duration-300">
+              <button
+                class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center text-white font-bold hover:text-brandRed transition">
+                <span>Do you provide ongoing support and maintenance?</span>
+                <i class="fa-solid fa-plus faq-icon text-gray-500 transition-transform duration-300"></i>
+              </button>
+              <div
+                class="faq-content hidden px-8 pb-6 text-gray-400 text-sm leading-relaxed border-t border-borderDark mt-4">
+                Yes, we offer comprehensive maintenance packages. This includes daily backups, core and plugin updates,
+                security monitoring, and dedicated development hours for any updates you need post-launch.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 7: CTA                             -->
+      <!-- ========================================== -->
+      <section
+        class="py-24 px-6 bg-gradient-to-r from-brandDarkRed via-brandRed to-brandDarkRed text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+          <span
+            class="uppercase tracking-widest text-xs md:text-sm font-extrabold bg-black/40 px-5 py-2 rounded-full border border-white/20">
+            Ready to upgrade your web presence?
+          </span>
+          <h2 class="font-heading text-4xl md:text-6xl font-black mt-8 mb-8 leading-tight">
+            Let's Build a WordPress Site <br>That Actually Converts
+          </h2>
+          <p class="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-12 font-medium">
+            Contact our engineering and digital growth experts today.
+          </p>
+          <a href="#contact"
+            class="bg-white text-gray-900 hover:bg-gray-100 font-extrabold text-base uppercase px-12 py-5 rounded-full transition shadow-2xl inline-flex items-center gap-3">
+            LET'S TALK <i class="fa-solid fa-arrow-right text-brandRed"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- SECTION 9: ULTRA EXTENSIVE BOLD FOOTER     -->
+    <!-- ========================================== -->
+    <footer id="contact"
+      class="bg-[#040406] border-t border-borderDark pt-28 pb-12 px-8 text-gray-300 text-sm relative overflow-hidden">
+
+      <div
+        class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brandRed/10 rounded-full blur-3xl pointer-events-none">
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+
+        <!-- TOP SECTION: NEWSLETTER STRIP -->
+        <div
+          class="bg-cardBg border border-borderDark p-10 md:p-12 rounded-3xl mb-20 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-2xl">
+          <div class="max-w-xl">
+            <span class="text-brandRed text-xs font-bold uppercase tracking-widest block mb-2">Stay Ahead In Digital
+              Era</span>
+            <h3 class="font-heading font-black text-3xl md:text-4xl text-white">Subscribe to Tech & Growth Insights</h3>
+            <p class="text-gray-300 text-sm mt-3 font-medium">Get monthly strategic updates on Web Development, Flutter,
+              SEO strategies, and enterprise software directly in your inbox.</p>
+          </div>
+
+          <form onsubmit="event.preventDefault();" class="w-full lg:w-auto flex flex-col sm:flex-row gap-4">
+            <div class="relative w-full sm:w-88">
+              <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-base"></i>
+              <input type="email" placeholder="Enter your official email"
+                class="w-full bg-bgDark border border-borderDark pl-12 pr-4 py-4 rounded-2xl text-sm text-white focus:outline-none focus:border-brandRed transition"
+                required />
+            </div>
+            <button type="submit"
+              class="bg-brandRed hover:bg-brandDarkRed text-white font-extrabold px-9 py-4 rounded-2xl transition uppercase text-xs tracking-wider shrink-0 shadow-lg shadow-brandRed/30 flex items-center justify-center gap-2">
+              <span>Join Now</span>
+              <i class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- MAIN FOOTER LINKS GRID (6 COLUMNS WITH LARGER FONTS) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-20 border-b border-borderDark/80">
+
+          <!-- Col 1 & 2: Brand Story -->
+          <div class="lg:col-span-2 space-y-6">
+            <a href="#" class="flex items-center space-x-3.5">
+              <img src="../images/icon.webp" alt="Icon" class="w-12 h-12 object-contain" />
+              <span class="font-heading font-black text-3xl text-white tracking-wider">Code<span
+                  class="text-brandRed">and</span>Leads</span>
+            </a>
+
+            <p class="text-gray-300 leading-relaxed text-sm font-medium">
+              Code and Leads is a full-service software development house and digital marketing partner engineering
+              custom web applications, cross-platform mobile apps, dynamic APIs, and scalable e-commerce brands.
+            </p>
+
+            <div
+              class="inline-flex items-center space-x-2.5 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full text-xs text-emerald-400 font-bold">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Available for Enterprise Projects</span>
+            </div>
+
+            <div class="pt-2 flex items-center space-x-3.5">
+              <a href="#" aria-label="Facebook"
+                class="w-10 h-10 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-200 hover:bg-brandRed hover:text-white transition"><i
+                  class="fa-brands fa-facebook-f text-sm"></i></a>
+              <a href="#" aria-label="Instagram"
+                class="w-10 h-10 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-200 hover:bg-brandRed hover:text-white transition"><i
+                  class="fa-brands fa-instagram text-sm"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                class="w-10 h-10 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-200 hover:bg-brandRed hover:text-white transition"><i
+                  class="fa-brands fa-linkedin-in text-sm"></i></a>
+              <a href="#" aria-label="Twitter"
+                class="w-10 h-10 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-200 hover:bg-brandRed hover:text-white transition"><i
+                  class="fa-brands fa-x-twitter text-sm"></i></a>
+              <a href="#" aria-label="GitHub"
+                class="w-10 h-10 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-200 hover:bg-brandRed hover:text-white transition"><i
+                  class="fa-brands fa-github text-sm"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 3: Development -->
+          <div>
+            <h4
+              class="text-white font-heading font-bold uppercase tracking-widest text-sm mb-6 border-l-3 border-brandRed pl-3">
+              Development</h4>
+            <ul class="space-y-3 text-gray-300 font-medium text-[15px]">
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Web Applications</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Flutter Mobile Apps</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Shopify Integration</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Node.js Backends</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> MySQL Solutions</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> RESTful APIs</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Marketing & Design -->
+          <div>
+            <h4
+              class="text-white font-heading font-bold uppercase tracking-widest text-sm mb-6 border-l-3 border-brandRed pl-3">
+              Marketing & Design</h4>
+            <ul class="space-y-3 text-gray-300 font-medium text-[15px]">
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Search Engine SEO</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Social Media (SMM)</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Google Ads / PPC</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> UI/UX Prototypes</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Packaging Printing</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Social Banners</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Featured Hubs -->
+          <div>
+            <h4
+              class="text-white font-heading font-bold uppercase tracking-widest text-sm mb-6 border-l-3 border-brandRed pl-3">
+              Featured Hubs</h4>
+            <ul class="space-y-3 text-gray-300 font-medium text-[15px]">
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Hair Guardians Store</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Glorience E-Commerce</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> 24Trainers Academy</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> Car Listing Hub</a></li>
+              <li><a href="#" class="hover:text-brandRed transition flex items-center gap-2"><i
+                    class="fa-solid fa-angle-right text-brandRed"></i> The Top Trend Media</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 6: Support -->
+          <div>
+            <h4
+              class="text-white font-heading font-bold uppercase tracking-widest text-sm mb-6 border-l-3 border-brandRed pl-3">
+              Contact Support</h4>
+            <div class="space-y-4 text-xs font-medium">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-9 h-9 rounded-xl bg-brandRed/10 border border-brandRed/20 flex items-center justify-center text-brandRed shrink-0 mt-0.5">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] uppercase text-gray-400 block font-bold">Email Us</span>
+                  <a href="../mailto:info@codeandleads.com"
+                    class="text-gray-200 hover:text-white transition font-semibold">info@codeandleads.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] uppercase text-gray-400 block font-bold">WhatsApp Hot-Line</span>
+                  <a href="https://wa.me/" target="_blank"
+                    class="text-gray-200 hover:text-white transition font-semibold">+92 311 1456324</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-9 h-9 rounded-xl bg-brandRed/10 border border-brandRed/20 flex items-center justify-center text-brandRed shrink-0 mt-0.5">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] uppercase text-gray-400 block font-bold">Working Hours</span>
+                  <span class="text-gray-200 font-semibold">Mon - Sat: 09:00 AM - 07:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BADGES STRIP -->
+        <div
+          class="py-10 border-b border-borderDark/60 flex flex-wrap justify-center items-center gap-10 text-gray-300 font-bold text-xs uppercase tracking-wider">
+          <div class="flex items-center space-x-2.5 text-emerald-400">
+            <i class="fa-brands fa-shopify text-xl"></i>
+            <span>Official Shopify Partner</span>
+          </div>
+          <span class="text-gray-700 hidden sm:inline">•</span>
+          <div class="flex items-center space-x-2.5 text-cyan-400">
+            <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+            <span>Flutter Certified Apps</span>
+          </div>
+          <span class="text-gray-700 hidden sm:inline">•</span>
+          <div class="flex items-center space-x-2.5 text-yellow-500">
+            <i class="fa-brands fa-google text-xl"></i>
+            <span>SEO & Ads Specialist</span>
+          </div>
+          <span class="text-gray-700 hidden sm:inline">•</span>
+          <div class="flex items-center space-x-2.5 text-brandRed">
+            <i class="fa-solid fa-server text-xl"></i>
+            <span>Enterprise Web Solutions</span>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT STRIP -->
+        <div
+          class="pt-10 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs font-medium gap-5">
+          <p>© 2026 <span class="text-gray-200 font-bold">Code and Leads IT Solutions</span>. All Rights Reserved.</p>
+
+          <div class="flex flex-wrap justify-center space-x-8">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+            <a href="#" class="hover:text-white transition">Refund Policy</a>
+            <a href="#" class="hover:text-white transition">Security & Compliance</a>
+            <a href="#" class="hover:text-white transition">Sitemap</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Swiper JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Dynamic Interactive Scripts -->
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+/* Custom Vertical Toolbar */
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+/* Full-Screen Drawer Overlay */
+#fullOverlayMenu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#fullOverlayMenu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Background Blob Animations */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+  animation: blob 15s infinite alternate ease-in-out;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Slow Spin Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spinSlowReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 40s linear infinite;
+}
+
+/* Seamless Infinite Marquee Animations */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 25s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 25s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Swiper Styling Tweaks */
+.swiper-pagination-bullet {
+  background: #333340 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #C91C34 !important;
+  width: 32px !important;
+  border-radius: 6px !important;
+}
+
+/* Smooth Glow & Card Micro-Interactions */
+.glow-card {
+  position: relative;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.25rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(201, 28, 52, 0.4), transparent, rgba(201, 28, 52, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Premium Animated Gradient Button */
+.btn-premium {
+  position: relative;
+  background: linear-gradient(90deg,
+      #C91C34 0%,
+      #ff6a00 25%,
+      #C91C34 50%,
+      #ff6a00 75%,
+      #C91C34 100%);
+  background-size: 200% auto;
+  border-radius: 9999px;
+  animation: flowGradient 3s linear infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(201, 28, 52, 0.3);
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 28, 52, 0.6);
+}
+
+@keyframes flowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Linear Transition for Marquee Swiper */
+.techMarqueeSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Code and Leads | Software & Marketing Solutions</title>
+  <meta name="description" content="Code and Leads provides top-tier Web Development, Mobile Apps, Graphic Design, and Digital Marketing solutions." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Swiper.js CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brandRed: '#C91C34',
+            brandDarkRed: '#8B1524',
+            bgDark: '#0A0A0D',
+            cardBg: '#141419',
+            borderDark: '#22222B'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom Vertical Toolbar */
+    .vertical-text {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+    
+    /* Full-Screen Drawer Overlay */
+    #fullOverlayMenu {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    #fullOverlayMenu.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Seamless Infinite Marquee Animations */
+    @keyframes marqueeLeft {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .animate-marquee-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 25s linear infinite;
+    }
+    .animate-marquee-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeRight 25s linear infinite;
+    }
+    .marquee-container:hover .animate-marquee-left,
+    .marquee-container:hover .animate-marquee-right {
+      animation-play-state: paused;
+    }
+
+    /* Swiper Styling Tweaks */
+    .swiper-pagination-bullet {
+      background: #333340 !important;
+      opacity: 1 !important;
+    }
+    .swiper-pagination-bullet-active {
+      background: #C91C34 !important;
+      width: 28px !important;
+      border-radius: 6px !important;
+    }
+    
+    /* Smooth Glow & Card Micro-Interactions */
+    .glow-card {
+      position: relative;
+    }
+    .glow-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 1rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(201, 28, 52, 0.4), transparent, rgba(201, 28, 52, 0.1));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-bgDark text-gray-200 font-sans antialiased overflow-x-hidden">
+
+  <!-- ========================================== -->
+  <!-- 1. FIXED LEFT SIDEBAR TOOLBAR             -->
+  <!-- ========================================== -->
+  <aside class="fixed left-0 top-0 h-full w-14 bg-[#0A0A0D] border-r border-borderDark z-50 hidden md:flex flex-col justify-between items-center py-6 text-[11px] font-bold tracking-widest text-gray-400">
+    <button id="openOverlayBtn" class="w-10 h-10 flex items-center justify-center text-white hover:text-brandRed transition">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+    
+    <div class="flex flex-col items-center space-y-12">
+      <a href="#contact" class="vertical-text uppercase hover:text-white transition flex items-center gap-2">
+        <i class="fa-solid fa-envelope rotate-90 text-brandRed"></i> GET IN TOUCH
+      </a>
+      <a href="https://wa.me/" target="_blank" class="vertical-text uppercase hover:text-emerald-400 transition flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp rotate-90 text-emerald-500 text-sm"></i> WHATSAPP
+      </a>
+    </div>
+
+    <a href="#" class="vertical-text uppercase hover:text-brandRed transition flex items-center gap-2 text-[10px]">
+      <i class="fa-solid fa-arrow-right rotate-90"></i> TOP
+    </a>
+  </aside>
+
+  <!-- Main Content Wrapper (Offset for Left Toolbar) -->
+  <div class="md:pl-14 min-h-screen flex flex-col">
+
+    <!-- ========================================== -->
+    <!-- TOP ANNOUNCEMENT HEADER & NAVIGATION       -->
+    <!-- ========================================== -->
+    <header class="bg-brandDarkRed text-white text-xs font-semibold py-2 px-6 flex justify-between items-center">
+      <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+        <div class="inline-flex items-center space-x-2 bg-black/20 px-3 py-1 rounded-full text-[11px]">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>CODE AND LEADS IT SOLUTIONS</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <span class="hidden sm:inline text-gray-300">Follow Us |</span>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-gray-300 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="sticky top-0 z-40 bg-[#0E0E12]/95 backdrop-blur-md border-b border-borderDark px-6 py-4">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-black rounded-lg border border-borderDark flex items-center justify-center text-white font-heading font-black text-xl shadow-lg shadow-brandRed/20">
+            <span class="text-white">C</span><span class="text-brandRed font-serif">{ }</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl tracking-wider text-white leading-none">
+              Code<span class="text-brandRed">and</span>Leads
+            </span>
+            <span class="text-[9px] text-gray-400 font-medium tracking-widest uppercase">Software & Marketing Solutions</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="hidden lg:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-gray-300">
+          <a href="#services" class="hover:text-brandRed transition">Services</a>
+          <a href="#portfolio" class="hover:text-brandRed transition">Portfolio</a>
+          <a href="#about" class="hover:text-brandRed transition">About Us</a>
+          <a href="#tech" class="hover:text-brandRed transition">Tech Stack</a>
+          <a href="#reviews" class="hover:text-brandRed transition">Reviews</a>
+          <a href="#contact" class="hover:text-brandRed transition">Contact</a>
+        </div>
+
+        <a href="#contact" class="bg-brandRed hover:bg-brandDarkRed text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition shadow-lg shadow-brandRed/30">
+          Get Started
+        </a>
+      </div>
+    </nav>
+
+    <!-- FULL OVERLAY DRAWER MENU -->
+    <div id="fullOverlayMenu" class="fixed inset-0 bg-[#070709]/98 z-50 opacity-0 invisible flex flex-col p-10 overflow-y-auto">
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="flex justify-between items-center mb-12 border-b border-borderDark pb-6">
+          <div class="flex items-center space-x-3">
+            <span class="font-heading font-extrabold text-2xl text-white">Code<span class="text-brandRed">and</span>Leads</span>
+          </div>
+          <button id="closeOverlayBtn" class="text-gray-400 hover:text-white text-3xl font-light">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+          <div>
+            <h3 class="text-brandRed font-bold text-base uppercase tracking-widest mb-4">Navigation</h3>
+            <ul class="space-y-3 font-semibold text-gray-300">
+              <li><a href="#" class="hover:text-white">Home</a></li>
+              <li><a href="#about" class="hover:text-white">About Us</a></li>
+              <li><a href="#services" class="hover:text-white">Services</a></li>
+              <li><a href="#portfolio" class="hover:text-white">Portfolio</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-brandRed font-bold text-base uppercase tracking-widest mb-4">Development</h3>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="#" class="hover:text-white">Web Development</a></li>
+              <li><a href="#" class="hover:text-white">Flutter Mobile Apps</a></li>
+              <li><a href="#" class="hover:text-white">Shopify & E-Commerce</a></li>
+              <li><a href="#" class="hover:text-white">Custom Dashboards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-brandRed font-bold text-base uppercase tracking-widest mb-4">Marketing</h3>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="#" class="hover:text-white">Search Engine Optimization</a></li>
+              <li><a href="#" class="hover:text-white">Social Media Marketing</a></li>
+              <li><a href="#" class="hover:text-white">Pay Per Click (PPC)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-brandRed font-bold text-base uppercase tracking-widest mb-4">Graphic Design</h3>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="#" class="hover:text-white">UI/UX Design</a></li>
+              <li><a href="#" class="hover:text-white">Brand Identity & Logos</a></li>
+              <li><a href="#" class="hover:text-white">Packaging & Standees</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BODY SECTIONS -->
+    <main class="flex-grow">
+
+      <!-- ========================================== -->
+      <!-- SECTION 1: BANNER HERO (WITH CANVAS FX)   -->
+      <!-- ========================================== -->
+      <section class="relative bg-gradient-to-b from-[#14141B] via-bgDark to-bgDark py-28 px-6 border-b border-borderDark overflow-hidden">
+        
+        <!-- Celebration Particles Canvas Animation -->
+        <canvas id="heroParticles" class="absolute inset-0 pointer-events-none z-0 opacity-80"></canvas>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+          
+          <div class="inline-flex items-center space-x-4 bg-[#1A1A22]/90 backdrop-blur-md border border-borderDark px-6 py-3 rounded-full mb-8 shadow-2xl">
+            <span class="font-extrabold text-white text-base font-heading tracking-wide">CODE & LEADS</span>
+            <span class="text-brandRed font-light">✕</span>
+            <div class="flex items-center space-x-1.5 text-emerald-400 font-semibold">
+              <i class="fa-brands fa-shopify text-xl"></i>
+              <span>shopify</span>
+            </div>
+          </div>
+
+          <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+            Code and Leads is now an <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brandRed via-red-500 to-rose-400">Official Shopify Partner</span>
+          </h1>
+          <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Build, Grow & Scale Your Enterprise Business with high-converting custom applications and high-end software solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#contact" class="bg-brandRed hover:bg-brandDarkRed text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-full transition shadow-xl shadow-brandRed/40 flex items-center gap-2">
+              Start Project <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#portfolio" class="bg-[#181820] hover:bg-[#22222D] text-white border border-borderDark text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-full transition">
+              View Work
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 2: OUR SERVICES (SWIPER SLIDER)   -->
+      <!-- ========================================== -->
+      <section id="services" class="py-20 px-6 bg-[#0E0E12] border-b border-borderDark">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14">
+            <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-white mb-3">Our Core Services</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Full-spectrum technology and digital marketing offerings crafted for fast growth.</p>
+          </div>
+
+          <div class="swiper servicesSwiper pb-14">
+            <div class="swiper-wrapper">
+              
+              <!-- Service 1 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark rounded-2xl p-8 hover:border-brandRed transition h-full flex flex-col justify-between">
+                  <div>
+                    <div class="w-14 h-14 bg-brandRed/10 text-brandRed rounded-xl flex items-center justify-center text-2xl mb-6">
+                      <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Web Development</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Dynamic HTML5, Tailwind CSS, JavaScript, PHP, dynamic MySQL, and Node.js solutions.</p>
+                  </div>
+                  <a href="#contact" class="mt-6 text-brandRed text-xs font-bold uppercase flex items-center gap-2">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark rounded-2xl p-8 hover:border-brandRed transition h-full flex flex-col justify-between">
+                  <div>
+                    <div class="w-14 h-14 bg-brandRed/10 text-brandRed rounded-xl flex items-center justify-center text-2xl mb-6">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Flutter Apps</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Cross-platform mobile applications for iOS & Android built with robust Flutter frameworks.</p>
+                  </div>
+                  <a href="#contact" class="mt-6 text-brandRed text-xs font-bold uppercase flex items-center gap-2">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark rounded-2xl p-8 hover:border-brandRed transition h-full flex flex-col justify-between">
+                  <div>
+                    <div class="w-14 h-14 bg-brandRed/10 text-brandRed rounded-xl flex items-center justify-center text-2xl mb-6">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Shopify Partner</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">End-to-end e-commerce store creation, custom app integrations, and checkout optimization.</p>
+                  </div>
+                  <a href="#contact" class="mt-6 text-brandRed text-xs font-bold uppercase flex items-center gap-2">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark rounded-2xl p-8 hover:border-brandRed transition h-full flex flex-col justify-between">
+                  <div>
+                    <div class="w-14 h-14 bg-brandRed/10 text-brandRed rounded-xl flex items-center justify-center text-2xl mb-6">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">SEO & Marketing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Rank higher on Google with on-page SEO, technical audits, link building, and paid PPC campaigns.</p>
+                  </div>
+                  <a href="#contact" class="mt-6 text-brandRed text-xs font-bold uppercase flex items-center gap-2">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark rounded-2xl p-8 hover:border-brandRed transition h-full flex flex-col justify-between">
+                  <div>
+                    <div class="w-14 h-14 bg-brandRed/10 text-brandRed rounded-xl flex items-center justify-center text-2xl mb-6">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-white mb-3">Graphic Designing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Brand identity logos, custom box printing designs, standees, and viral social media posts.</p>
+                  </div>
+                  <a href="#contact" class="mt-6 text-brandRed text-xs font-bold uppercase flex items-center gap-2">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 3: PORTFOLIO (2 ROWS × 4 COLS = 8 BOXES) -->
+      <!-- ========================================== -->
+      <section id="portfolio" class="py-24 px-6 bg-bgDark border-b border-borderDark">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <span class="text-brandRed text-xs font-bold uppercase tracking-widest">Selected Works</span>
+            <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-white mt-2 mb-4">Code & Leads Portfolio</h2>
+            <p class="text-gray-400 text-sm max-w-xl mx-auto">Explore our high-performing client platforms, enterprise mobile apps, and e-commerce designs.</p>
+          </div>
+
+          <!-- 2 Rows × 4 Columns Grid = 8 Big Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Box 1 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-car text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">Web Portal</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Car Listing Marketplace</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">Interactive vehicle listing hub with filter systems & backend API.</p>
+              </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-gem text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">E-Commerce</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Glorience E-Store</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">Luxury hair care brand custom design & Shopify integrations.</p>
+              </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-graduation-cap text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">EdTech Platform</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">24Trainers Platform</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">IT academy portal with live course indexing and enrollment.</p>
+              </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-newspaper text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">Media & News</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">The Top Trend Portal</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">High-traffic digital media and optimized news indexing system.</p>
+              </div>
+            </div>
+
+            <!-- Box 5 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-mobile-screen-button text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">Flutter App</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Cross-Platform App</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">High-performance native mobile application framework for iOS/Android.</p>
+              </div>
+            </div>
+
+            <!-- Box 6 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-box text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">Branding</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Packaging Box Graphic</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">Custom physical product box vector layout & print design.</p>
+              </div>
+            </div>
+
+            <!-- Box 7 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-chart-pie text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">SaaS Dashboard</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Enterprise CRM Portal</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">Real-time analytical metrics dashboard with custom APIs.</p>
+              </div>
+            </div>
+
+            <!-- Box 8 -->
+            <div class="bg-cardBg border border-borderDark rounded-2xl overflow-hidden group hover:border-brandRed transition flex flex-col justify-between">
+              <div class="h-48 bg-[#181820] relative flex items-center justify-center p-6 text-center border-b border-borderDark/60 group-hover:bg-[#1f1f2a] transition">
+                <i class="fa-solid fa-shield-halved text-4xl text-brandRed/60 group-hover:scale-110 group-hover:text-brandRed transition"></i>
+                <span class="absolute top-3 left-3 bg-brandRed/20 text-brandRed text-[10px] font-bold px-3 py-1 rounded-full uppercase">Health Tech</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-white text-base group-hover:text-brandRed transition">Hair Guardians Ecosystem</h3>
+                <p class="text-gray-400 text-xs mt-2 leading-relaxed">Digital identity, marketing funnels and storefront design.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 4: ABOUT US                       -->
+      <!-- ========================================== -->
+      <section id="about" class="py-20 px-6 bg-[#0E0E12] border-b border-borderDark">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-brandRed font-bold text-xs uppercase tracking-widest">About Code and Leads</span>
+            <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-white mt-2 mb-6 leading-tight">
+              We Bridge The Gap Between Innovation & Growth
+            </h2>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Code and Leads is a full-service software development and digital marketing agency dedicated to empowering enterprise brands worldwide. From robust Web/Mobile applications to high-impact marketing funnels, we deliver pixel-perfect results.
+            </p>
+            <div class="grid grid-cols-3 gap-6 pt-4 border-t border-borderDark">
+              <div>
+                <span class="font-heading font-extrabold text-3xl text-brandRed">150+</span>
+                <p class="text-xs text-gray-400 mt-1">Projects Completed</p>
+              </div>
+              <div>
+                <span class="font-heading font-extrabold text-3xl text-brandRed">99%</span>
+                <p class="text-xs text-gray-400 mt-1">Client Satisfaction</p>
+              </div>
+              <div>
+                <span class="font-heading font-extrabold text-3xl text-brandRed">24/7</span>
+                <p class="text-xs text-gray-400 mt-1">Dedicated Support</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="w-full h-80 bg-gradient-to-tr from-brandDarkRed/40 to-brandRed/20 rounded-3xl border border-borderDark flex items-center justify-center p-8 text-center">
+              <div>
+                <i class="fa-solid fa-rocket text-5xl text-brandRed mb-4"></i>
+                <h3 class="font-heading font-bold text-2xl text-white">Empowered By Innovation</h3>
+                <p class="text-xs text-gray-400 mt-2 max-w-sm">Driving digital transformation with cutting-edge tools and strategy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 5: OUR CLIENTS (NO-GAP MARQUEE)   -->
+      <!-- ========================================== -->
+      <section class="py-16 px-6 bg-bgDark border-b border-borderDark overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center mb-10">
+          <h2 class="font-heading text-2xl md:text-3xl font-extrabold text-white">Trusted By Enterprise Brands</h2>
+        </div>
+
+        <div class="marquee-container flex flex-col space-y-6">
+          
+          <!-- ROW 1: LEFT TO RIGHT SEAMLESS -->
+          <div class="overflow-hidden whitespace-nowrap">
+            <div class="animate-marquee-left space-x-6">
+              <!-- First Set -->
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-shield-halved text-brandRed"></i> <span>Hair Guardians</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-gem text-brandRed"></i> <span>Glorience</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-brandRed"></i> <span>24Trainers</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-car text-brandRed"></i> <span>Car Listing Hub</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-newspaper text-brandRed"></i> <span>The Top Trend</span>
+              </div>
+              
+              <!-- Duplicate Set for Zero Gap -->
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-shield-halved text-brandRed"></i> <span>Hair Guardians</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-gem text-brandRed"></i> <span>Glorience</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-brandRed"></i> <span>24Trainers</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-car text-brandRed"></i> <span>Car Listing Hub</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-newspaper text-brandRed"></i> <span>The Top Trend</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 2: RIGHT TO LEFT SEAMLESS -->
+          <div class="overflow-hidden whitespace-nowrap">
+            <div class="animate-marquee-right space-x-6">
+              <!-- First Set -->
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-brands fa-shopify text-emerald-400"></i> <span>Shopify Partner</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-brands fa-wordpress text-blue-400"></i> <span>WordPress Hub</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-bolt text-brandRed"></i> <span>Fast Logistics</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-globe text-purple-400"></i> <span>Global Retailers</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-layer-group text-yellow-400"></i> <span>Tech Ecosystems</span>
+              </div>
+              
+              <!-- Duplicate Set for Zero Gap -->
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-brands fa-shopify text-emerald-400"></i> <span>Shopify Partner</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-brands fa-wordpress text-blue-400"></i> <span>WordPress Hub</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-bolt text-brandRed"></i> <span>Fast Logistics</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-globe text-purple-400"></i> <span>Global Retailers</span>
+              </div>
+              <div class="bg-cardBg border border-borderDark px-8 py-4 rounded-xl text-gray-300 font-bold text-sm inline-flex items-center space-x-3">
+                <i class="fa-solid fa-layer-group text-yellow-400"></i> <span>Tech Ecosystems</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 6: HIGH-END CUSTOMER REVIEWS      -->
+      <!-- ========================================== -->
+      <section id="reviews" class="py-24 px-6 bg-[#0E0E12] border-b border-borderDark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+          
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+            <div>
+              <span class="text-brandRed text-xs font-bold uppercase tracking-widest">Testimonials</span>
+              <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-white mt-2">What Our Clients Say</h2>
+            </div>
+            <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+              Real feedback from industry leaders and business owners who scale with Code and Leads.
+            </p>
+          </div>
+
+          <div class="swiper reviewSwiper pb-16">
+            <div class="swiper-wrapper">
+              
+              <!-- Review Card 1 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark p-8 rounded-3xl glow-card h-full flex flex-col justify-between">
+                  <div>
+                    <div class="flex justify-between items-center mb-6">
+                      <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> Verified Partner
+                      </span>
+                    </div>
+                    <p class="text-gray-300 text-xs md:text-sm leading-relaxed italic mb-8">
+                      "Code and Leads delivered our web platform with incredible technical expertise, creative problem solving, and prompt delivery. Their dynamic engineering capabilities elevated our entire ecosystem."
+                    </p>
+                  </div>
+                  <div class="flex items-center space-x-4 pt-4 border-t border-borderDark">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brandDarkRed to-brandRed rounded-full flex items-center justify-center font-bold text-white text-base shadow-lg shadow-brandRed/20">
+                      SS
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-bold text-white text-sm">Shamoon Sharif</h4>
+                      <p class="text-[11px] text-gray-400">Founder & CEO, Bearing.pk</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review Card 2 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark p-8 rounded-3xl glow-card h-full flex flex-col justify-between">
+                  <div>
+                    <div class="flex justify-between items-center mb-6">
+                      <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> Verified Client
+                      </span>
+                    </div>
+                    <p class="text-gray-300 text-xs md:text-sm leading-relaxed italic mb-8">
+                      "The UI design, packaging graphics, and Shopify store performance completely elevated our brand presence online! The conversion rate shot up within two weeks of launch."
+                    </p>
+                  </div>
+                  <div class="flex items-center space-x-4 pt-4 border-t border-borderDark">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brandDarkRed to-brandRed rounded-full flex items-center justify-center font-bold text-white text-base shadow-lg shadow-brandRed/20">
+                      HG
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-bold text-white text-sm">Glorience Team</h4>
+                      <p class="text-[11px] text-gray-400">Hair Guardians Brand Management</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review Card 3 -->
+              <div class="swiper-slide">
+                <div class="bg-cardBg border border-borderDark p-8 rounded-3xl glow-card h-full flex flex-col justify-between">
+                  <div>
+                    <div class="flex justify-between items-center mb-6">
+                      <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> Verified Enterprise
+                      </span>
+                    </div>
+                    <p class="text-gray-300 text-xs md:text-sm leading-relaxed italic mb-8">
+                      "Outstanding Flutter app architecture and seamless API integration! Code and Leads proved to be the most reliable engineering partner for our enterprise project."
+                    </p>
+                  </div>
+                  <div class="flex items-center space-x-4 pt-4 border-t border-borderDark">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brandDarkRed to-brandRed rounded-full flex items-center justify-center font-bold text-white text-base shadow-lg shadow-brandRed/20">
+                      24
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-bold text-white text-sm">24Trainers Platform</h4>
+                      <p class="text-[11px] text-gray-400">Director of Operations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 7: OUR TECHNOLOGY STACK (TABS)     -->
+      <!-- ========================================== -->
+      <section id="tech" class="py-20 px-6 bg-bgDark border-b border-borderDark">
+        <div class="max-w-7xl mx-auto">
+          
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="w-8 h-[2px] bg-brandRed"></span>
+            <h2 class="font-heading font-extrabold text-3xl md:text-5xl text-brandRed tracking-tight uppercase">
+              OUR TECHNOLOGY STACK
+            </h2>
+          </div>
+          <p class="text-gray-400 text-sm max-w-4xl mb-12 leading-relaxed">
+            Crafting software requires a blend of expertise and acumen. Every developer knows the pivotal role that the choice of technology stack plays in shaping a solution. Below is an inventory of programming languages, frameworks, databases, and platforms that our IT firm specializes in.
+          </p>
+
+          <!-- Interactive Tabbed Interface (Left Menu & Right Grid) -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left Side Tabs Menu -->
+            <div class="md:col-span-4 border-l-2 border-borderDark space-y-2">
+              <button onclick="switchTab('programming')" id="tab-programming" class="tech-tab-btn w-full text-left px-6 py-4 text-sm font-bold tracking-wider uppercase transition text-brandRed border-l-2 border-brandRed -ml-[2px] bg-cardBg">
+                PROGRAMMING LANGUAGES
+              </button>
+              <button onclick="switchTab('frameworks')" id="tab-frameworks" class="tech-tab-btn w-full text-left px-6 py-4 text-sm font-bold tracking-wider uppercase transition text-gray-400 border-l-2 border-transparent -ml-[2px] hover:text-white">
+                WEB FRAMEWORKS
+              </button>
+              <button onclick="switchTab('mobile')" id="tab-mobile" class="tech-tab-btn w-full text-left px-6 py-4 text-sm font-bold tracking-wider uppercase transition text-gray-400 border-l-2 border-transparent -ml-[2px] hover:text-white">
+                MOBILE & DATABASES
+              </button>
+              <button onclick="switchTab('cms')" id="tab-cms" class="tech-tab-btn w-full text-left px-6 py-4 text-sm font-bold tracking-wider uppercase transition text-gray-400 border-l-2 border-transparent -ml-[2px] hover:text-white">
+                CMS PLATFORMS
+              </button>
+            </div>
+
+            <!-- Right Side Changing Content Cards -->
+            <div class="md:col-span-8 bg-cardBg border border-borderDark p-8 rounded-2xl min-h-[250px] flex items-center justify-center">
+              
+              <!-- Content 1: Programming Languages -->
+              <div id="content-programming" class="tech-content grid grid-cols-2 sm:grid-cols-3 gap-8 w-full text-center">
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-js text-yellow-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">JavaScript</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-python text-blue-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Python</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-php text-purple-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">PHP</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-html5 text-orange-500 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">HTML5 / CSS3</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-solid fa-code text-brandRed text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">C#</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-java text-red-500 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Java</h4>
+                </div>
+              </div>
+
+              <!-- Content 2: Web Frameworks -->
+              <div id="content-frameworks" class="tech-content hidden grid grid-cols-2 sm:grid-cols-3 gap-8 w-full text-center">
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-node-js text-emerald-500 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Node.js</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-laravel text-red-600 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Laravel</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-react text-cyan-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">React.js</h4>
+                </div>
+              </div>
+
+              <!-- Content 3: Mobile & Databases -->
+              <div id="content-mobile" class="tech-content hidden grid grid-cols-2 sm:grid-cols-3 gap-8 w-full text-center">
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-solid fa-mobile-retro text-cyan-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Flutter</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-solid fa-database text-blue-500 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">MySQL</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-solid fa-server text-emerald-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">MongoDB</h4>
+                </div>
+              </div>
+
+              <!-- Content 4: CMS Platforms -->
+              <div id="content-cms" class="tech-content hidden grid grid-cols-2 sm:grid-cols-3 gap-8 w-full text-center">
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-shopify text-emerald-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">Shopify</h4>
+                </div>
+                <div class="p-4 bg-bgDark rounded-xl border border-borderDark">
+                  <i class="fa-brands fa-wordpress text-blue-400 text-4xl mb-2"></i>
+                  <h4 class="text-sm font-bold text-white">WordPress</h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 8: BEAUTIFUL CALL TO ACTION (CTA)  -->
+      <!-- ========================================== -->
+      <section class="py-20 px-6 bg-gradient-to-r from-brandDarkRed via-brandRed to-brandDarkRed text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+          <span class="uppercase tracking-widest text-xs font-extrabold bg-black/30 px-4 py-1.5 rounded-full border border-white/10">
+            Looking For An International IT Solution Agency?
+          </span>
+          <h2 class="font-heading text-3xl md:text-5xl font-extrabold mt-6 mb-6 leading-tight">
+            We Strive to Understand Your Goals <br>& Boost Your Success
+          </h2>
+          <p class="text-white/80 text-sm max-w-xl mx-auto mb-10">
+            Let's build something extraordinary together. Contact our engineering and growth experts today.
+          </p>
+          <a href="#contact" class="bg-white text-gray-900 hover:bg-gray-100 font-extrabold text-sm uppercase px-10 py-5 rounded-full transition shadow-2xl inline-flex items-center gap-3">
+            LET'S TALK <i class="fa-solid fa-arrow-right text-brandRed"></i>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- SECTION 9: ULTRA EXTENSIVE PRO FOOTER     -->
+    <!-- ========================================== -->
+   <!-- ========================================== -->
+<!-- ULTRA EXTENSIVE & PROFESSIONAL FOOTER       -->
+<!-- ========================================== -->
+<footer id="contact" class="bg-[#040406] border-t border-borderDark pt-24 pb-12 px-6 text-gray-400 text-xs relative overflow-hidden">
+  
+  <!-- Subtle Background Radial Glow -->
+  <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brandRed/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- TOP SECTION: NEWSLETTER & CTA STRIP -->
+    <div class="bg-cardBg border border-borderDark p-8 md:p-10 rounded-3xl mb-16 flex flex-col lg:flex-row justify-between items-center gap-8 shadow-2xl">
+      <div class="max-w-xl">
+        <span class="text-brandRed text-[11px] font-bold uppercase tracking-widest block mb-1">Stay Ahead In Digital Era</span>
+        <h3 class="font-heading font-extrabold text-2xl md:text-3xl text-white">Subscribe to Tech & Growth Insights</h3>
+        <p class="text-gray-400 text-xs mt-2">Get monthly strategic updates on Web Development, Flutter, SEO strategies, and enterprise solutions directly in your inbox.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault();" class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+        <div class="relative w-full sm:w-80">
+          <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+          <input type="email" placeholder="Enter your official email" class="w-full bg-bgDark border border-borderDark pl-11 pr-4 py-3.5 rounded-xl text-xs text-white focus:outline-none focus:border-brandRed transition" required />
+        </div>
+        <button type="submit" class="bg-brandRed hover:bg-brandDarkRed text-white font-bold px-8 py-3.5 rounded-xl transition uppercase text-xs tracking-wider shrink-0 shadow-lg shadow-brandRed/30 flex items-center justify-center gap-2">
+          <span>Join Now</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- MAIN FOOTER LINKS GRID (6 COLUMNS) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-16 border-b border-borderDark/80">
+      
+      <!-- Col 1 & 2: Brand Story & Global Presence -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="#" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-black rounded-lg border border-borderDark flex items-center justify-center text-white font-heading font-black text-xl shadow-lg shadow-brandRed/20">
+            <span class="text-white">C</span><span class="text-brandRed font-serif">{ }</span>
+          </div>
+          <span class="font-heading font-extrabold text-2xl text-white tracking-wider">Code<span class="text-brandRed">and</span>Leads</span>
+        </a>
+        
+        <p class="text-gray-400 leading-relaxed text-xs">
+          Code and Leads is a full-service software development house and digital marketing partner engineering custom web applications, cross-platform mobile apps, dynamic APIs, and scalable e-commerce brands.
+        </p>
+
+        <!-- Live Operations Indicator -->
+        <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full text-[11px] text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Available for New Enterprise Projects</span>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="pt-2 flex items-center space-x-3">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-300 hover:bg-brandRed hover:text-white hover:border-brandRed transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+          <a href="#" aria-label="Instagram" class="w-9 h-9 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-300 hover:bg-brandRed hover:text-white hover:border-brandRed transition"><i class="fa-brands fa-instagram text-xs"></i></a>
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-300 hover:bg-brandRed hover:text-white hover:border-brandRed transition"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+          <a href="#" aria-label="Twitter" class="w-9 h-9 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-300 hover:bg-brandRed hover:text-white hover:border-brandRed transition"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+          <a href="#" aria-label="GitHub" class="w-9 h-9 bg-cardBg border border-borderDark rounded-xl flex items-center justify-center text-gray-300 hover:bg-brandRed hover:text-white hover:border-brandRed transition"><i class="fa-brands fa-github text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 3: Development Services -->
+      <div>
+        <h4 class="text-white font-heading font-bold uppercase tracking-widest text-xs mb-5 border-l-2 border-brandRed pl-3">Development</h4>
+        <ul class="space-y-2.5 text-gray-400">
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Web Applications</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Flutter Mobile Apps</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Shopify Development</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Custom Node.js Backends</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Dynamic MySQL Solutions</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> RESTful API Engineering</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Marketing & Graphic Design -->
+      <div>
+        <h4 class="text-white font-heading font-bold uppercase tracking-widest text-xs mb-5 border-l-2 border-brandRed pl-3">Marketing & Design</h4>
+        <ul class="space-y-2.5 text-gray-400">
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Search Engine (SEO)</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Social Media (SMM)</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Google Ads / PPC</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> UI/UX Modern Prototypes</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Packaging Printing Designs</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Social Media Banners</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Specialized Portals -->
+      <div>
+        <h4 class="text-white font-heading font-bold uppercase tracking-widest text-xs mb-5 border-l-2 border-brandRed pl-3">Featured Hubs</h4>
+        <ul class="space-y-2.5 text-gray-400">
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Hair Guardians Store</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Glorience E-Commerce</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> 24Trainers Academy</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> Car Listing Hub</a></li>
+          <li><a href="#" class="hover:text-brandRed transition flex items-center gap-1.5"><i class="fa-solid fa-angle-right text-[10px] text-brandRed"></i> The Top Trend Media</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 6: Direct Support & Contact -->
+      <div>
+        <h4 class="text-white font-heading font-bold uppercase tracking-widest text-xs mb-5 border-l-2 border-brandRed pl-3">Contact Support</h4>
+        <div class="space-y-3.5 text-xs">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-brandRed/10 border border-brandRed/20 flex items-center justify-center text-brandRed shrink-0 mt-0.5">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-gray-500 block font-semibold">Email Us</span>
+              <a href="mailto:info@codeandleads.com" class="text-gray-300 hover:text-white transition">info@codeandleads.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-gray-500 block font-semibold">WhatsApp Hot-Line</span>
+              <a href="https://wa.me/" target="_blank" class="text-gray-300 hover:text-white transition">+92 311 1456324</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-gray-500 block font-semibold">Working Hours</span>
+              <span class="text-gray-300">Mon - Sat: 09:00 AM - 07:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MIDDLE PARTNERS & CERTIFICATIONS BADGES -->
+    <div class="py-8 border-b border-borderDark/60 flex flex-wrap justify-center items-center gap-8 text-gray-400 font-semibold text-xs uppercase tracking-wider">
+      <div class="flex items-center space-x-2 text-emerald-400">
+        <i class="fa-brands fa-shopify text-lg"></i>
+        <span>Official Shopify Partner</span>
+      </div>
+      <span class="text-gray-700 hidden sm:inline">•</span>
+      <div class="flex items-center space-x-2 text-cyan-400">
+        <i class="fa-solid fa-mobile-screen-button text-lg"></i>
+        <span>Flutter Certified Apps</span>
+      </div>
+      <span class="text-gray-700 hidden sm:inline">•</span>
+      <div class="flex items-center space-x-2 text-yellow-500">
+        <i class="fa-brands fa-google text-lg"></i>
+        <span>SEO & Ads Specialist</span>
+      </div>
+      <span class="text-gray-700 hidden sm:inline">•</span>
+      <div class="flex items-center space-x-2 text-purple-400">
+        <i class="fa-solid fa-server text-lg"></i>
+        <span>Enterprise Web Solutions</span>
+      </div>
+    </div>
+
+    <!-- BOTTOM COPYRIGHT & LEGAL STRIP -->
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[11px] gap-4">
+      <p>© 2026 <span class="text-gray-300 font-semibold">Code and Leads IT Solutions</span>. All Rights Reserved.</p>
+      
+      <div class="flex flex-wrap justify-center space-x-6">
+        <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
+        <a href="#" class="hover:text-gray-300 transition">Refund Policy</a>
+        <a href="#" class="hover:text-gray-300 transition">Security & Compliance</a>
+        <a href="#" class="hover:text-gray-300 transition">Sitemap</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  </div>
+
+  <!-- Swiper JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Dynamic Interactive Scripts -->
+  <script>
+    // 1. Interactive Particles Canvas Animation (Hero Celebration Effect)
+    const canvas = document.getElementById('heroParticles');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const particles = [];
+    const colors = ['#C91C34', '#8B1524', '#ffffff', '#34d399', '#f59e0b'];
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.speedY = (Math.random() - 0.5) * 0.8;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.alpha = Math.random() * 0.7 + 0.3;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // 2. Swiper Services Carousel
+    const servicesSwiper = new Swiper('.servicesSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+    // 3. Swiper Review Testimonials
+    const reviewSwiper = new Swiper('.reviewSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 5000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        768: { slidesPerView: 2 }
+      }
+    });
+
+    // 4. Drawer Overlay Dynamic Menu Toggle
+    const openOverlayBtn = document.getElementById('openOverlayBtn');
+    const closeOverlayBtn = document.getElementById('closeOverlayBtn');
+    const fullOverlayMenu = document.getElementById('fullOverlayMenu');
+
+    openOverlayBtn.addEventListener('click', () => {
+      fullOverlayMenu.classList.add('active');
+    });
+
+    closeOverlayBtn.addEventListener('click', () => {
+      fullOverlayMenu.classList.remove('active');
+    });
+
+    // 5. Tech Stack Tab Switcher
+    function switchTab(tabName) {
+      document.querySelectorAll('.tech-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.querySelectorAll('.tech-tab-btn').forEach(btn => {
+        btn.classList.remove('text-brandRed', 'border-brandRed', 'bg-cardBg');
+        btn.classList.add('text-gray-400', 'border-transparent');
+      });
+
+      document.getElementById('content-' + tabName).classList.remove('hidden');
+      const activeBtn = document.getElementById('tab-' + tabName);
+      activeBtn.classList.add('text-brandRed', 'border-brandRed', 'bg-cardBg');
+      activeBtn.classList.remove('text-gray-400', 'border-transparent');
+    }
+  </script>
+</body>
+</html>
